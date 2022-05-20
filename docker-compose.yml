@@ -1,0 +1,9 @@
+version: "3"
+services:
+  app:
+    container_name: "gpt-j-6b"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: gpt-j-6b-container
+    tty: true
