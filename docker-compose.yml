@@ -6,4 +6,12 @@ services:
       context: .
       dockerfile: ./Dockerfile
     image: gpt-j-6b-container
+    volumes:
+        - ./:/home/
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
     tty: true
