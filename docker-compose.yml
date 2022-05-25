@@ -7,7 +7,7 @@ services:
       dockerfile: ./Dockerfile
     image: gpt-j-6b-container
     volumes:
-        - ./:/home/
+        - ./example:/home/docker-gpt-j-6b-example
     deploy:
       resources:
         reservations:
